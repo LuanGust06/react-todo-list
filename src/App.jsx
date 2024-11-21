@@ -53,6 +53,9 @@ function App() {
         setTodos(updatedTodos);
     };
 
+    const todoContent = todos.filter((todo) => todo.text.toLowerCase().includes(search.toLowerCase()))
+        .map((todo) => ( <Todo key={todo.id} completeTodo={completeTodo} removeTodo={removeTodo} todo={todo} />))
+
     return (
         <main className="app">
             <header>
@@ -61,18 +64,7 @@ function App() {
             </header>
             <section>
                 <ul className="todo-list">
-                    {todos
-                        .filter((todo) =>
-                            todo.text.toLowerCase().includes(search.toLowerCase())
-                        )
-                        .map((todo) => (
-                            <Todo
-                                key={todo.id}
-                                completeTodo={completeTodo}
-                                removeTodo={removeTodo}
-                                todo={todo}
-                            />
-                        ))}
+                    {todoContent}
                 </ul>
             </section>
             <footer>
