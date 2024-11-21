@@ -11,8 +11,8 @@ const Todo = ({todo, removeTodo, completeTodo}) => {
                 <p>{todo.text}</p>
                 <p className='category'>({todo.category})</p>
             </div>
-            <div>
-                <button onClick={() => completeTodo(todo.id)} className="complete">Completar Trefa</button>
+            <div className="btn-content">
+                <button onClick={() => completeTodo(todo.id)} className={`toggle-btn ${todo.isCompleted ? 'toggled' : ''}`} ><div className="thumb"></div></button>
                 <button title="Excluir Tarefa" onClick={() => removeTodo(todo.id)} className="remove"> <FontAwesomeIcon icon={faTimes} /></button>
             </div>
         </li>
