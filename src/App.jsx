@@ -1,9 +1,8 @@
 import { useState } from 'react';
-import './App.css';
 import Todo from './components/Todo.jsx';
 import TodoForm from "./components/TodoForm.jsx";
 import Search from "./components/Search.jsx";
-
+import styles from './App.module.css';
 function App() {
     const [todos, setTodos] = useState([
         {
@@ -57,13 +56,13 @@ function App() {
         .map((todo) => ( <Todo key={todo.id} completeTodo={completeTodo} removeTodo={removeTodo} todo={todo} />))
 
     return (
-        <main className="app">
+        <main className={styles.app}>
             <header>
                 <h1>Lista de tarefas</h1>
                 <Search search={search} setSearch={setSearch} />
             </header>
             <section>
-                <ul className="todo-list">
+                <ul className={styles.todoList}>
                     {todoContent}
                 </ul>
             </section>

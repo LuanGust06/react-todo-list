@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import styles from './TodoForm.module.css';
 const TodoForm = ({ addTodo }) => {
     const [value, setValue] = useState("");
     const [category, setCategory] = useState("");
@@ -13,10 +13,10 @@ const TodoForm = ({ addTodo }) => {
     };
 
     return (
-        <div className="todo-form">
+        <div className={styles.todoForm}>
             <h2>Criar Nova Tarefa</h2>
             <form onSubmit={handleSubmit}>
-                    <div className="form-group">
+                    <div className={styles.formGroup}>
                         <label htmlFor="task-title">Título</label>
                         <input
                             id="task-title"
@@ -28,7 +28,7 @@ const TodoForm = ({ addTodo }) => {
                         />
                     </div>
 
-                    <div className="form-group">
+                    <div className={styles.formGroup}>
                         <label htmlFor="task-category">Categoria</label>
                         <select
                             id="task-category"

@@ -1,0 +1,70 @@
+.todo {
+    width: 100%;
+    margin-right: 40px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.5);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.content {
+    flex: 1;
+}
+
+.btnContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.toggleBtn {
+    background-color: #333974;
+    border: 1px solid #aaa;
+    border-radius: 99px;
+    width: 50px;
+    height: 28px;
+    transition: background-color 0.1s ease;
+    cursor: pointer;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.748);
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.toggleBtn .thumb {
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border-radius: 99px;
+    transform: translateX(0);
+    transition: left 0.15s ease;
+    position: absolute;
+    left: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.toggleBtn.toggled {
+    background-color: #15b58e;
+}
+
+.toggleBtn:hover {
+    border-color: gray;
+}
+
+.toggleBtn.toggled .thumb {
+    left: calc(50px - 25px);
+}
+
+.remove {
+    background-color: #d9534f;
+    width: 50%;
+}
