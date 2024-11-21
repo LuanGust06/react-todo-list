@@ -1,5 +1,8 @@
 # todo-list (todo-list)
 
+## Imagem do sistema
+![img.png](img.png)
+
 ## Instalar as dependências
 
 ```bash
